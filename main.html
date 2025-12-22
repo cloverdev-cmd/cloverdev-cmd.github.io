@@ -1,373 +1,176 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <body class="bg-black text-white font-sans">
-        <nav class="flex flex-col md:flex-row items-center container mx-auto my-12 gap-6 px-4">
-            <!-- Profile Image -->
-            <img class="w-32 h-32 md:w-40 md:h-40 rounded-[10px]" src="image\IMG_2972.jpg" alt="Axl Matte" />
-    
-            <!-- Profile Info -->
-            <div class="flex flex-col gap-3 text-center md:text-left">
-                <p class="font-bold text-2xl md:text-[30px]">Axl Marcelo</p>
+  <style>
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-                        <!-- Quick Facts -->
-                        <div class="flex items-center gap-3">
-                            <span class="w-2 h-2 bg-white rounded-full"></span>
-                            <p class="text-sm md:text-base">
-                              Based in
-                              <a href="https://www.google.com/maps/place/Bulacan,+Philippines"
-                                 target="_blank"
-                                 rel="noopener noreferrer"
-                                 class="underline hover:text-gray-300 transition">
-                                Bulacan, Philippines
-                              </a>
-                            </p>
-                          </div>
-    
-            <div class="flex items-center gap-3">
-              <span class="w-2 h-2 bg-white rounded-full"></span>
-              <p class="text-sm md:text-base">Web & Mobile Development</p>
-            </div>
-    
-            <div class="flex items-center gap-3">
-              <span class="w-2 h-2 bg-white rounded-full"></span>
-              <p class="text-sm md:text-base">Open to freelance & full-time roles</p>
-            </div> 
-          </div>
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
 
- <!-- CTA Buttons -->
- <div class="flex flex-wrap gap-3 mt-4">
-    <a href="#projects"
-       class="px-4 py-2 border border-white rounded-[10px] text-sm hover:bg-white hover:text-black transition">
-      View Projects
-    </a>
-    <a href="mailto:contact.amworx@gmail.com"
-       class="px-4 py-2 border border-white rounded-[10px] text-sm hover:bg-purple-800 hover:text-black transition">
-      Contact Me
-    </a>
-    <a href="https://github.com/cloverdev-cmd"
-    class="px-4 py-2 border border-white rounded-[10px] text-sm hover:bg-white hover:text-black transition">
+    .animate-fade-up {
+      animation: fadeUp 0.8s ease-out forwards;
+    }
 
-    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.1 3.29 9.43 7.86 10.96.58.1.79-.25.79-.56v-2.02c-3.2.7-3.88-1.55-3.88-1.55-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.3-.52-1.52.11-3.17 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.65.23 2.87.11 3.17.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.68.41.35.77 1.04.77 2.1v3.11c0 .31.21.66.8.55A11.53 11.53 0 0 0 23.5 12.02C23.5 5.74 18.27.5 12 .5z"/>
-      </svg>
- </a>
-  </div>
-        </nav>
-    
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
+    }
+  </style>
+</head>
 
-<!-- Get to know me container -->
-<div class="container mx-auto my-12 px-4">
-    <div class="rounded-[10px] border border-white bg-purple-800
-                shadow-[0_0_12px_rgba(255,255,255,0.15)]
-                px-6 py-6">
-  
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-  
-        <!-- About Text -->
-        <div class="flex flex-col gap-4 text-sm md:text-base text-gray-200">
-            <h2 class="text-2xl font-semibold text-white mb-1 text-center md:text-left">
-                Get to know me
-              </h2>
-          <p>
-            I’m a passionate <span class="text-white font-semibold">Web & Mobile Developer</span>
-            who enjoys building clean, responsive, and user-focused applications.
-          </p>
-  
-          <p>
-            I started writing code in 2019 and have since worked on projects ranging
-            from simple websites to full-stack applications.
-          </p>
-  
-          <p>
-            I value <span class="text-white">clean code</span>, 
-            <span class="text-white">good UX</span>, and 
-            <span class="text-white">continuous learning</span>.
-          </p>
-        </div>
-  
+<body class="min-h-screen bg-gradient-to-br from-black via-purple-950 to-black text-white font-sans">
 
-  
-      </div>
+<!-- ================= NAV ================= -->
+<nav class="flex flex-col md:flex-row items-center container mx-auto my-16 gap-8 px-4 animate-fade-up">
+
+  <img
+    src="image/IMG_2972.jpg"
+    class="w-36 h-36 md:w-44 md:h-44 rounded-xl
+           border border-purple-500/40
+           shadow-[0_0_30px_rgba(168,85,247,0.5)]
+           animate-float"
+  />
+
+  <div class="flex flex-col gap-4 text-center md:text-left">
+    <p class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+      Axl Marcelo
+    </p>
+
+    <div class="flex items-center gap-3 justify-center md:justify-start">
+      <span class="w-2 h-2 bg-purple-400 rounded-full"></span>
+      <p class="text-sm">
+        Based in
+        <a class="underline hover:text-purple-300 transition"
+           href="https://www.google.com/maps/place/Bulacan,+Philippines"
+           target="_blank">Bulacan, Philippines</a>
+      </p>
     </div>
-  </div>
 
-<!-- Timeline container -->
-<div class="container mx-auto my-12 px-4">
-
-    <div class="relative rounded-[10px] px-6 py-6
-                bg-purple-800 border border-white
-                shadow-[0_0_12px_rgba(255,255,255,0.15)]">
-  
-      <!-- Title inside container -->
-      <h2 class="text-2xl font-semibold text-white mb-8 text-center md:text-left">
-        Experience
-      </h2>
-  
-      <!-- Horizontal line for desktop -->
-      <div class="hidden md:block absolute top-24 left-0 w-full h-[2px] bg-white rounded"></div>
-  
-      <!-- Vertical line for mobile -->
-      <div class="md:hidden absolute left-8 top-24 bottom-6 w-[2px] bg-white rounded"></div>
-  
-      <!-- Timeline Items Container -->
-      <div class="relative flex flex-col md:flex-row items-center justify-between gap-12">
-  
-        <!-- Timeline Item 1 -->
-        <div class="flex flex-row md:flex-col items-center gap-4 relative w-full md:w-50">
-          <div class="w-4 h-4 bg-white rounded-full border-2 border-black z-10"></div>
-          <span class="text-sm text-white text-center md:text-left">
-            First writing code 
-          </span>
-        </div>
-  
-        <!-- Timeline Item 2 -->
-        <div class="flex flex-row md:flex-col items-center gap-4 relative w-full md:w-50">
-          <div class="w-4 h-4 bg-white rounded-full border-2 border-black z-10"></div>
-          <span class="text-sm text-white text-center md:text-left">
-            BS In Information Technology 
-          </span>
-        </div>
-  
-      </div>
+    <div class="flex items-center gap-3 justify-center md:justify-start">
+      <span class="w-2 h-2 bg-purple-400 rounded-full"></span>
+      <p class="text-sm">Web & Mobile Development</p>
     </div>
-  </div>
 
-  <!-- Tech Stack container -->
-<div class="container mx-auto my-12 px-4">
-
-    <div class="rounded-[10px] border border-white bg-purple-800
-                shadow-[0_0_12px_rgba(255,255,255,0.15)]
-                px-6 py-6">
-  
-      <!-- Title -->
-      <h2 class="text-2xl font-semibold text-white mb-6 flex items-center gap-2">
-        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24">
-          <path d="M11.98 2.25l1.1 2.22a7.98 7.98 0 0 1 2.3.96l2.4-.88 1.25 2.16-1.87 1.78c.2.77.3 1.58.3 2.41s-.1 1.64-.3 2.41l1.87 1.78-1.25 2.16-2.4-.88a7.98 7.98 0 0 1-2.3.96l-1.1 2.22h-2.5l-1.1-2.22a7.98 7.98 0 0 1-2.3-.96l-2.4.88-1.25-2.16 1.87-1.78a7.98 7.98 0 0 1-.3-2.41c0-.83.1-1.64.3-2.41L2.7 6.71 3.95 4.55l2.4.88a7.98 7.98 0 0 1 2.3-.96l1.1-2.22h2.5z"/>
-          <circle cx="12" cy="12" r="3"/>
-        </svg>
-        Tech Stack
-      </h2>
-  
-
-      <div class="mb-6">
-        <h3 class="text-sm font-semibold text-gray-200 mb-3">Frontend</h3>
-        <div class="flex flex-wrap gap-2">
-          <span class="px-3 py-1 text-xs border border-white rounded-full">JavaScript</span>
-          <span class="px-3 py-1 text-xs border border-white rounded-full">Java</span>
-          <span class="px-3 py-1 text-xs border border-white rounded-full">Flutter</span>
-          <span class="px-3 py-1 text-xs border border-white rounded-full">React</span>
-          <span class="px-3 py-1 text-xs border border-white rounded-full">Next.js</span>
-          <span class="px-3 py-1 text-xs border border-white rounded-full">Tailwind CSS</span>
-        </div>
-      </div>
-  
-
-      <div class="mb-6">
-        <h3 class="text-sm font-semibold text-gray-200 mb-3">Backend</h3>
-        <div class="flex flex-wrap gap-2">
-          <span class="px-3 py-1 text-xs border border-white rounded-full">Node.js</span>
-          <span class="px-3 py-1 text-xs border border-white rounded-full">Python</span>
-          <span class="px-3 py-1 text-xs border border-white rounded-full">PHP</span>
-          <span class="px-3 py-1 text-xs border border-white rounded-full">Laravel</span>
-        </div>
-      </div>
-  
-  
+    <div class="flex items-center gap-3 justify-center md:justify-start">
+      <span class="w-2 h-2 bg-purple-400 rounded-full"></span>
+      <p class="text-sm">Open to freelance & full-time roles</p>
     </div>
-  </div>
-  
 
-<!-- Projects container -->
-<div id="projects" class="container mx-auto my-12 px-4">
+    <div class="flex flex-wrap gap-3 mt-4 justify-center md:justify-start">
+      <a href="#projects"
+         class="px-5 py-2 rounded-xl text-sm
+                bg-gradient-to-r from-purple-600 to-pink-600
+                hover:scale-105 transition shadow-lg">
+        View Projects
+      </a>
 
-
-    <div class="rounded-[10px] border border-white bg-purple-800
-                shadow-[0_0_12px_rgba(255,255,255,0.15)]
-                px-6 py-6">
-  
-      <h2 class="text-2xl font-semibold text-white mb-6 text-center md:text-left">
-        Projects
-      </h2>
-  
-      <details class="group">
-        
-   
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-  
-          <div class="rounded-[10px] border border-white bg-purple-800 p-6
-                      transition-all duration-300
-                      hover:border-black hover:text-black">
-  
-            <h3 class="text-lg font-semibold mb-2">Portfolio Website</h3>
-            <p class="text-sm text-gray-200 mb-4">
-              Personal portfolio built with modern responsive design and clean UI.
-            </p>
-  
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs px-2 py-1 border rounded">HTML</span>
-              <span class="text-xs px-2 py-1 border rounded">Tailwind</span>
-              <span class="text-xs px-2 py-1 border rounded">JavaScript</span>
-            </div>
-          </div>
-  
-   
-          <div class="rounded-[10px] border border-white bg-purple-800 p-6
-                      transition-all duration-300
-                      hover:border-black hover:text-black">
-  
-            <h3 class="text-lg font-semibold mb-2">Task Management App</h3>
-            <p class="text-sm text-gray-200 mb-4">
-              A productivity app for managing daily tasks and tracking progress.
-            </p>
-  
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs px-2 py-1 border rounded">React</span>
-              <span class="text-xs px-2 py-1 border rounded">Firebase</span>
-              <span class="text-xs px-2 py-1 border rounded">Tailwind</span>
-            </div>
-          </div>
-        </div>
-
-        
-        <summary
-          class="cursor-pointer list-none mt-8 mb-6 text-center
-                 px-10 py-2 border border-white rounded-[10px]
-                 w-fit mx-auto
-                 transition hover:bg-white hover:text-black">
-          <span class="group-open:hidden">View Projects</span>
-          <span class="hidden group-open:inline">Show Less</span>
-        </summary>
-    
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-  
-          <div class="rounded-[10px] border border-white bg-purple-800 p-6
-                      transition-all duration-300
-                      hover:border-black hover:text-black">
-  
-            <h3 class="text-lg font-semibold mb-2">Guider</h3>
-            <p class="text-sm text-gray-200 mb-4">
-              Commute Mobile Application.
-            </p>
-  
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs px-2 py-1 border rounded">Flutter</span>
-              <span class="text-xs px-2 py-1 border rounded">Dart</span>
-              <span class="text-xs px-2 py-1 border rounded">Firebase</span>
-            </div>
-          </div>
-  
-        </div>
-      </details>
-  
-
-
-    </div>
-  </div>
-  
-<!-- Social container -->
-<div class="container mx-auto my-12 px-4">
-
-    <div class="rounded-[10px] border border-white bg-purple-800
-                shadow-[0_0_12px_rgba(255,255,255,0.15)]
-                px-6 py-6 space-y-8">
-  
-      <div>
-        <h3 class="text-sm font-semibold text-gray-200 mb-3 flex items-center gap-2">
-            <!-- Users Icon -->
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-                 viewBox="0 0 24 24">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-            Member of
-          </h3>
-  
-        <div class="space-y-3">
-          <a href="https://www.facebook.com/GDGoCNUBaliwag"
-             target="_blank"
-             class="block border border-white rounded-[10px] px-4 py-3 text-sm
-                    hover:border-black hover:text-black transition">
-            Google Developer On Campus - NU Baliwag (2022)
-          </a>
- 
-        </div>
-      </div>
-  
-      <div>
-        <h3 class="text-sm font-semibold text-gray-200 mb-3 flex items-center gap-2">
-            <!-- Link Icon -->
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-                 viewBox="0 0 24 24">
-              <path d="M10 13a5 5 0 0 1 7.07 0l1.41 1.41a5 5 0 0 1-7.07 7.07l-1.41-1.41"/>
-              <path d="M14 11a5 5 0 0 0-7.07 0L5.52 12.41a5 5 0 0 0 7.07 7.07l1.41-1.41"/>
-            </svg>
-            Social Links
-          </h3>
-    
-  
-        <div class="space-y-3">
-  
-            <a href="https://github.com/cloverdev-cmd"
-            target="_blank"
-            class="flex items-center gap-3 border border-white rounded-[10px] px-4 py-3 text-sm
-                   hover:border-black hover:text-black transition">
-           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-             <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.1 3.29 9.43 7.86 10.96.58.1.79-.25.79-.56v-2.02c-3.2.7-3.88-1.55-3.88-1.55-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.3-.52-1.52.11-3.17 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.65.23 2.87.11 3.17.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.68.41.35.77 1.04.77 2.1v3.11c0 .31.21.66.8.55A11.53 11.53 0 0 0 23.5 12.02C23.5 5.74 18.27.5 12 .5z"/>
-           </svg>
-           GitHub
-         </a>
-  
-         <a href="https://www.instagram.com/"
-         target="_blank"
-         class="flex items-center gap-3 border border-white rounded-[10px] px-4 py-3 text-sm
-                hover:border-black hover:text-black transition">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zM17.75 6a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
-        </svg>
-        Instagram
+      <a href="mailto:contact.amworx@gmail.com"
+         class="px-5 py-2 rounded-xl text-sm
+                border border-purple-500/50
+                hover:bg-purple-800/40 transition">
+        Contact Me
       </a>
     </div>
   </div>
-  
+</nav>
+
+<!-- ================= CARD STYLE ================= -->
+<style>
+  .glass {
+    background: linear-gradient(
+      135deg,
+      rgba(168,85,247,0.15),
+      rgba(0,0,0,0.4)
+    );
+    backdrop-filter: blur(10px);
+  }
+
+  .card {
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(168,85,247,0.35);
+  }
+</style>
+
+<!-- ================= ABOUT ================= -->
+<div class="container mx-auto my-12 px-4 animate-fade-up">
+  <div class="glass card rounded-xl border border-purple-500/30 p-6">
+    <h2 class="text-2xl font-semibold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+      Get to know me
+    </h2>
+
+    <div class="text-gray-200 space-y-3 text-sm md:text-base">
+      <p>
+        I’m a <span class="text-white font-semibold">Web & Mobile Developer</span>
+        who enjoys building clean and user-focused apps.
+      </p>
+      <p>
+        I started coding in 2019, working on projects from simple sites
+        to full-stack applications.
+      </p>
+      <p>
+        I value <span class="text-white">clean code</span>,
+        <span class="text-white">good UX</span>,
+        and <span class="text-white">continuous learning</span>.
+      </p>
     </div>
   </div>
-  
-<!-- Footer -->
-<footer class="mt-20 border-t border-white/20">
-    <div class="container mx-auto px-4 py-10 text-center">
-  
-      
-      <p class="text-lg font-semibold text-white">
-        Hi I'm Axl! c:
-      </p>
-  
-      
-      <div class="w-24 h-[2px] mx-auto my-4 
-                  bg-gradient-to-r from-transparent via-purple-500 to-transparent
-                  shadow-[0_0_12px_rgba(168,85,247,0.6)]">
+</div>
+
+<!-- ================= PROJECTS ================= -->
+<div id="projects" class="container mx-auto my-12 px-4 animate-fade-up">
+  <div class="glass rounded-xl border border-purple-500/30 p-6">
+    <h2 class="text-2xl font-semibold mb-6 text-center md:text-left">
+      Projects
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="card rounded-xl border border-purple-500/30 p-5">
+        <h3 class="font-semibold text-lg">AMWORX SOLUTION</h3>
+        <p class="text-sm text-gray-300 mt-2">
+          website for digital services
+        </p>
       </div>
-  
-      
-      <p class="text-sm text-gray-400">
-        © 2025 <span class="text-white">Axl Marcelo</span>. All rights reserved.
-      </p>
-  
-      
-      <p class="text-xs text-gray-500 mt-2">
-       I purple you 💜
-      </p>
-  
+
+      <div class="card rounded-xl border border-purple-500/30 p-5">
+        <h3 class="font-semibold text-lg">Task Management App</h3>
+        <p class="text-sm text-gray-300 mt-2">
+          Productivity app for daily task tracking.
+        </p>
+      </div>
     </div>
-  </footer>
-  
-    </body>
-    
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="mt-20 border-t border-purple-500/20">
+  <div class="container mx-auto px-4 py-12 text-center">
+    <p class="text-lg font-semibold">Hi I'm Axl! 💜</p>
+
+    <div class="w-28 h-[2px] mx-auto my-4
+                bg-gradient-to-r from-transparent via-purple-500 to-transparent
+                shadow-[0_0_12px_rgba(168,85,247,0.7)]"></div>
+
+    <p class="text-sm text-gray-400">
+      © 2025 <span class="text-white">Axl Marcelo</span>
+    </p>
+
+    <p class="text-xs text-gray-500 mt-2">
+      I purple you 💜
+    </p>
+  </div>
+</footer>
+
+</body>
 </html>
