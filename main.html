@@ -23,6 +23,23 @@
     .animate-float {
       animation: float 4s ease-in-out infinite;
     }
+
+    /* ===== Tech Stack Hover Animation ===== */
+@keyframes techGlow {
+  0% { box-shadow: 0 0 0 rgba(168,85,247,0); }
+  50% { box-shadow: 0 0 25px rgba(168,85,247,0.6); }
+  100% { box-shadow: 0 0 0 rgba(168,85,247,0); }
+}
+
+.tech-card {
+  transition: all 0.35s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  animation: techGlow 1.4s infinite;
+}
+
   </style>
 </head>
 
@@ -127,6 +144,54 @@
     </div>
   </div>
 </div>
+
+<!-- ================= TECH STACK ================= -->
+<section class="container mx-auto my-12 px-4 animate-fade-up">
+  <div class="glass rounded-xl border border-purple-500/30 p-6">
+
+    <h2 class="text-2xl font-semibold mb-6
+               bg-gradient-to-r from-purple-400 to-pink-400
+               bg-clip-text text-transparent">
+      Tech Stack
+    </h2>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+
+      <!-- Languages -->
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">Python</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">Java</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">JavaScript</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">C++</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">C#</div>
+
+      <!-- Frameworks & Tools -->
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">Flutter</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">PHP</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">Vite</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">Firebase</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">MySQL</div>
+
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">Laravel</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">Tailwind CSS</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">Bootstrap</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">Node.js</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">React.js</div>
+
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">Spring Boot</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">TensorFlow</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">PyTorch</div>
+
+      <!-- Tools -->
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">PyCharm</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">VS Code</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">GitHub</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">Git</div>
+      <div class="tech-card rounded-xl border border-purple-500/30 p-4 text-center text-sm">Blender</div>
+
+    </div>
+  </div>
+</section>
+
 
 <!-- ================= PROJECTS ================= -->
 <div id="projects" class="container mx-auto my-12 px-4 animate-fade-up">
